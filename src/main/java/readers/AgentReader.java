@@ -8,17 +8,14 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
-public class StaffReader {
-    public static List<String> staffList;
+public class AgentReader {
+    public static List<String> staffInfos;
 
-    public static List<String> getStaffList(){
-        String txtStaff = getTextFromGithub("https://raw.githubusercontent.com/adrienDespretz/msprApplication-ressources/master/staff.txt");
-        staffList = Arrays.asList(txtStaff.split("\n"));
+    public static List<String> getAgentInfos(String staffName){
+        String txtStaff = getTextFromGithub("https://raw.githubusercontent.com/adrienDespretz/msprApplication-ressources/master/data/"+staffName+".txt");
+        staffInfos = Arrays.asList(txtStaff.split("\n"));
 
-        // sort alphabetically
-        java.util.Collections.sort(staffList);
-
-        return staffList;
+        return staffInfos;
     }
 
     public static String getTextFromGithub(String link) {

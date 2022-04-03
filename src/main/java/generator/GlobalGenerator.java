@@ -1,18 +1,14 @@
 package generator;
 
-import readers.MaterielReader;
-import readers.StaffReader;
-
-import java.util.List;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 public class GlobalGenerator {
-    private static StaffReader staffReader;
-    private static MaterielReader materielReader;
-
     public static void main(String[] args) {
-        List<String> staffList = staffReader.getStaffList();
-        List<String> materielList = materielReader.getMaterielList();
-        System.out.println(staffList);
-        System.out.println(materielList);
+        AccueilGenerator generator = new AccueilGenerator();
+        String indexHtml = generator.getHtmlPage();
+
+
     }
 }
