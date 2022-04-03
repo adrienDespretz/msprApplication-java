@@ -1,16 +1,18 @@
 package generator;
 
 import objects.Agent;
-import readers.StaffReader;
 
 import java.util.List;
 
-public class AccueilGenerator {
-    private static StaffReader staffReader;
+public class AgentPageGenerator {
+    public static Agent agent;
+
+    public AgentPageGenerator(String staffName){
+        agent = new Agent(staffName);
+    }
 
     public String getHtmlPage(){
-        List<String> staffList = staffReader.getStaffList();
-
+        List<String> listeMateriel = agent.getListeMateriel();
         // Début de page
         String htmlContent = "<!DOCTYPE html>\n" +
                 "<html lang=\"en\">\n" +
@@ -22,14 +24,16 @@ public class AccueilGenerator {
                 "</head>\n" +
                 "<body>\n";
 
-        // Contenu = Liens vers les fiches agent
-        htmlContent += "<h3>Liste des agents :</h3>";
+        // Contenu = Infos des agents
+        htmlContent += "<h3>"+agent.getNom()+" "+agent.getPrenom()+"</h3>\n";
+        htmlContent += "<h4>"+agent.getPoste()+"</h4>\n";
+
+        htmlContent += "Liste du matériel : \n";
         htmlContent += "<ul>\n";
-        for(String staffName : staffList){
-            Agent agent = new Agent(staffName);
-            htmlContent += "<li><a href=\"agents/"+agent.getLogin()+".html\">"+agent.getNom()+" "+agent.getPrenom()+"</a></li>\n";
+        for(String materiel : listeMateriel){
+            htmlContent += "<li>"+materiel+"</li>\n";
         }
-        htmlContent += "</ul>";
+        htmlContent += "</ul>\n";
 
         // Fin de page
         htmlContent += "</body>\n" +
