@@ -5,21 +5,29 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 public class MaterielReader {
-    public static List<String> materielList;
+    public static Map<String, String> materielList;
 
-    public static List<String> getMaterielList(){
+    public static Map<String, String> getMaterielList(){
+        materielList = new HashMap<String, String>();
+
         String txtStaff = getTextFromGithub("https://raw.githubusercontent.com/adrienDespretz/msprApplication-ressources/master/liste.txt");
-        materielList = Arrays.asList(txtStaff.split("\n"));
+        List<String> tmpMaterielIndexList = Arrays.asList(txtStaff.split("\n"));
+        List<String> tmpMaterielName = Arrays.asList(txtStaff.split("\n"));
 
         int cpt = 0;
-        for(String materiel : materielList){
+        for(String materiel : tmpMaterielIndexList){
             int index = materiel.indexOf(' ');
-            materiel = materiel.substring(index + 1);
-            materielList.set(cpt, materiel);
+            String materielIndex = materiel.substring(0, index);
+            String materielName = materiel.substring(index + 1, materiel.length());
+            tmpMaterielIndexList.set(cpt, materielIndex);
+            tmpMaterielName.set(cpt, materielName);
+
+            materielList.put(tmpMaterielIndexList.get(cpt), tmpMaterielName.get(cpt));
             cpt++;
         }
 
