@@ -22,7 +22,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>main.java.generator.GlobalGenerator</mainClass>
+                            <mainClass>com.generator.GlobalGenerator</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
