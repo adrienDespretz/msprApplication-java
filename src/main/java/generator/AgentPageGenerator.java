@@ -26,24 +26,38 @@ public class AgentPageGenerator {
                 "    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n" +
                 "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n" +
                 "    <title>Document</title>\n" +
+                "  <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;500;600;700&amp;display=swap'><link rel=\"stylesheet\" href=\"../style.css\">\n"+
                 "</head>\n" +
                 "<body>\n";
 
-        // Contenu = Infos des agents
-        htmlContent += "<h3>"+agent.getNom()+" "+agent.getPrenom()+"</h3>\n";
-        htmlContent += "<h4>"+agent.getPoste()+"</h4>\n";
+        // Contenu = Liens vers les fiches agent
+        htmlContent += "<article class=\"leaderboard\">\n";
+        htmlContent += " <header>\n";
+        htmlContent += "<img src=\"../gosecuri.png\" style=\"padding-top: 12px;\" class=\"\">\n";
+        htmlContent += " <h1  class=\"leaderboard__title\">";
+        htmlContent += "<span class=\"leaderboard__title--top\">"+agent.getNom()+" "+agent.getPrenom()+"</span>\n";
+        htmlContent += "<span class=\"leaderboard__title--top\">"+agent.getPoste()+"</span>\n";
+        htmlContent += "</h1>\n";
+        htmlContent += " </header>\n";
 
-        // Carte d'identité
-        htmlContent += "<img alt=\"Photo d'identité\" src=\""+agent.getImgUrl()+"\"><br>\n";
+        htmlContent += " <main class=\"leaderboard__profiles\">\n";
+        htmlContent += " <img src=\""+agent.getImgUrl()+"\" style=\"border-radius: 20px;\" >";
+        htmlContent += " <div class=\"container\">\n";
+        htmlContent += " <div class=\"row\">";
+        htmlContent += " <div class=\"col-sm-offset-4 col-sm-4\">";
+        htmlContent += "<div class=\"checkbox-list\">\n";
 
-        // Lise du matériel
-        htmlContent += "Liste du matériel : \n";
-        htmlContent += "<ul>\n";
         for(String materiel : listeMateriel){
-            htmlContent += "<li>"+materielArray.get(materiel)+"</li>\n";
+            htmlContent += "<div class=\"checkbox\">\n";
+            htmlContent += "<img src=\"../check.png\" />\n";
+            htmlContent += "<label class=\"leaderboard__name\">"+materielArray.get(materiel)+"!</label>\n";
+            htmlContent += "</div>\n";
         }
-        htmlContent += "</ul>\n";
-
+        htmlContent += " </div>\n";
+        htmlContent += " </div>\n";
+        htmlContent += " </div>\n";
+        htmlContent += " </div>\n";
+        htmlContent += " </main>\n";
         // Fin de page
         htmlContent += "</body>\n" +
                 "</html>";
