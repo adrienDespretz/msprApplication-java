@@ -58,7 +58,7 @@ public class AgentPageGenerator {
         htmlContent += " </div>\n";
         htmlContent += " </div>\n";
         htmlContent += " </div>\n";
-        htmlContent += " <button class=\"button-19\"  type=\"button\" formaction=\"../index.html\">Retour</button>\n";
+        htmlContent += " <button class=\"button-19\"  type=\"button\" formaction=\"http://90.39.27.77\">Retour</button>\n";
         // Fin de page
         htmlContent += "</body>\n" +
                 "</html>";
