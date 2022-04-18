@@ -42,7 +42,6 @@ public class AccueilGenerator {
         htmlContent += "</main>";
         htmlContent += "</article>";
 
-        // Fin de page
         htmlContent += "</body>\n" +
                 "</html>";
 
