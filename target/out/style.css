@@ -116,7 +116,7 @@ body {
   box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.4);
 }
 
-.button-19 {
+input[type=button]  {
   appearance: button;
   background-color: #1899D6;
   border: solid transparent;
@@ -147,7 +147,7 @@ body {
   width: 100%;
 }
 
-.button-19:after {
+input[type=button]:after {
   background-clip: padding-box;
   background-color: #1CB0F6;
   border: solid transparent;
@@ -162,16 +162,16 @@ body {
   z-index: -1;
 }
 
-.button-19:main,
-.button-19:focus {
+input[type=button]:main,
+input[type=button]:focus {
   user-select: auto;
 }
 
-.button-19:hover:not(:disabled) {
+input[type=button]:hover:not(:disabled) {
   filter: brightness(1.1);
   -webkit-filter: brightness(1.1);
 }
 
-.button-19:disabled {
+input[type=button]:disabled {
   cursor: auto;
 }
