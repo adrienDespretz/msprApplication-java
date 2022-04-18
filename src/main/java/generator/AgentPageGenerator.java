@@ -57,7 +57,8 @@ public class AgentPageGenerator {
         htmlContent += " </div>\n";
         htmlContent += " </div>\n";
         htmlContent += " </div>\n";
-        htmlContent += " </main>\n";
+        htmlContent += " </div>\n";
+        htmlContent += " <button class=\"button-19\"  type=\"button\"formaction=\"javascript:history.go(-1)\">Retour</button>\n";
         // Fin de page
         htmlContent += "</body>\n" +
                 "</html>";
