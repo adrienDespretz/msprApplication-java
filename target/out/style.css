@@ -175,3 +175,13 @@ input[type=button]:hover:not(:disabled) {
 input[type=button]:disabled {
   cursor: auto;
 }
+
+#searchbar{
+  padding:15px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+input[type=text] {
+   width: 89%;
+}

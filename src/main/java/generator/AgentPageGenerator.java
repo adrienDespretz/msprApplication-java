@@ -41,6 +41,7 @@ public class AgentPageGenerator {
         htmlContent += " </header>\n";
 
         htmlContent += " <main class=\"leaderboard__profiles\">\n";
+        htmlContent += " <input id=\"searchbar\" onkeyup=\"search_personnel()\" type=\"text\" name=\"search\" placeholder=\"Ex : Pouton\">\n";
         htmlContent += " <img src=\""+agent.getImgUrl()+"\" style=\"border-radius: 20px;\" >";
         htmlContent += " <div class=\"container\">\n";
         htmlContent += " <div class=\"row\">";
