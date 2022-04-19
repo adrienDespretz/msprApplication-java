@@ -58,17 +58,16 @@ public class AgentPageGenerator {
         htmlContent += " </div>\n";
         htmlContent += " </div>\n";
         htmlContent += " </div>\n";
-<<<<<<< HEAD
+
         htmlContent += " </main>\n";
         htmlContent += " </article>\n";
+
         // Fin de page
-=======
         htmlContent += " </div>\n";
         htmlContent += " <form>\n";
         htmlContent += " <input class=\"button-19\" type=\"button\" value=\"Retour\" onclick=\"history.back()\">\n";
         htmlContent += " </form>\n";
 
->>>>>>> 26b91aa5a95cb606fef21d70e8a36e8fb371586d
         htmlContent += "</body>\n" +
                 "</html>";
 
