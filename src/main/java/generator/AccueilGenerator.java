@@ -30,6 +30,7 @@ public class AccueilGenerator {
         htmlContent += " <h1  class=\"leaderboard__title\"> <span class=\"leaderboard__title--top\">Personnel</span></h1>\n";
         htmlContent += " </header>\n";
         htmlContent += "  <main class=\"leaderboard__profiles\">\n";
+        htmlContent += " <input id=\"searchbar\" onkeyup=\"search_personnel()\" type=\"text\" name=\"search\" placeholder=\"Ex : Pouton\">\n";
         for(String staffName : staffList){
             Agent agent = new Agent(staffName);
             htmlContent += " <a class=\"block\" href=\"agents/"+agent.getLogin()+".html\">";
@@ -41,8 +42,8 @@ public class AccueilGenerator {
         }
         htmlContent += "</main>";
         htmlContent += "</article>";
+        htmlContent += "<script src=\"./personnel.js\"></script>\n";
 
-        // Fin de page
         htmlContent += "</body>\n" +
                 "</html>";
 
