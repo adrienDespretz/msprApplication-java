@@ -20,13 +20,14 @@ public class AgentPageGenerator {
 
         // Début de page
         String htmlContent = "<!DOCTYPE html>\n" +
-                "<html lang=\"en\">\n" +
+                "<html lang=\"fr\">\n" +
                 "<head>\n" +
                 "    <meta charset=\"UTF-8\">\n" +
                 "    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n" +
                 "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n" +
                 "    <title>Document</title>\n" +
-                "  <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;500;600;700&amp;display=swap'><link rel=\"stylesheet\" href=\"../style.css\">\n"+
+                "    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;500;600;700&amp;display=swap'>\n" +
+                "    <link rel=\"stylesheet\" href=\"../style.css\">\n"+
                 "</head>\n" +
                 "<body>\n";
 
@@ -58,6 +59,7 @@ public class AgentPageGenerator {
         htmlContent += " </div>\n";
         htmlContent += " </div>\n";
         htmlContent += " </main>\n";
+        htmlContent += " </article>\n";
         // Fin de page
         htmlContent += "</body>\n" +
                 "</html>";
