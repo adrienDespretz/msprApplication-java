@@ -8,7 +8,7 @@ function search_personnel() {
             x[i].style.display="none";
         }
         else {
-            x[i].style.display="inherit";                               
+            x[i].style.display="flex";                               
         }
     }
 }
