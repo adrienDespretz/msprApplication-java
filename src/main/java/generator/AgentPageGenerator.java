@@ -62,8 +62,7 @@ public class AgentPageGenerator {
         htmlContent += " <form>\n";
         htmlContent += " <input class=\"button-19\" type=\"button\" value=\"Retour\" onclick=\"history.back()\">\n";
         htmlContent += " </form>\n";
-
-        // Fin de page
+        
         htmlContent += "</body>\n" +
                 "</html>";
 
