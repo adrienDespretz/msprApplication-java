@@ -111,11 +111,9 @@ body {
   place-items: center;
   font-family: "Source Sans Pro", sans-serif;
 }
-
 .leaderboard {
-  box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.5);
 }
-
 input[type=button]  {
   appearance: button;
   background-color: #1899D6;
