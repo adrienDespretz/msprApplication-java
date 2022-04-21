@@ -12,7 +12,7 @@ public class GlobalGenerator {
         String indexHtml = accueilGenerator.getHtmlPage();
 
         try {
-            FileWriter myWriter = new FileWriter("target/out/index.html");
+            FileWriter myWriter = new FileWriter("out/index.html");
             myWriter.write(indexHtml);
             myWriter.close();
             System.out.println("Successfully wrote to the file.");
@@ -28,7 +28,7 @@ public class GlobalGenerator {
             String agentPageHtml = agentPageGenerator.getHtmlPage();
 
             try {
-                FileWriter myWriter = new FileWriter("target/out/agents/"+staffName+".html");
+                FileWriter myWriter = new FileWriter("out/agents/"+staffName+".html");
                 myWriter.write(agentPageHtml);
                 myWriter.close();
                 System.out.println("Successfully wrote to the file.");
