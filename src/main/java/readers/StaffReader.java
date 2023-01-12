@@ -18,6 +18,7 @@ public class StaffReader {
         // sort alphabetically
         java.util.Collections.sort(staffList);
 
+
         return staffList;
     }
 
