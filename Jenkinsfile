@@ -6,10 +6,9 @@ pipeline {
     environment {
         NEXUS_VERSION = "nexus2"
         NEXUS_PROTOCOL = "http"
-        NEXUS_URL = "http://localhost:8081"
+        NEXUS_URL = "localhost:8081/nexus"
         NEXUS_REPOSITORY = "TPJenkins"
-        NEXUS_CREDENTIAL_ID = "1"
-        NEXUS_SCRIPT = "maven-create-hosted"
+        NEXUS_CREDENTIAL_ID = "NEXUS_ID"
     }
     stages {
         stage('Recupere le git des info') {
@@ -38,7 +37,7 @@ pipeline {
         stage('Publish to nexus') {
             steps {
                 script {
-                    // Read POM xml file using 'readMavenPom' step , this step 'readMavenPom' is included in: https://plugins.jenkins.io/pipeline-utility-steps
+ // Read POM xml file using 'readMavenPom' step , this step 'readMavenPom' is included in: https://plugins.jenkins.io/pipeline-utility-steps
                     pom = readMavenPom file: "pom.xml";
                     // Find built artifact under target folder
                     filesByGlob = findFiles(glob: "target/*.${pom.packaging}");
