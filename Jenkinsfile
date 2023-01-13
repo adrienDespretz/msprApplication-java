@@ -34,7 +34,7 @@ pipeline {
         stage('Generate website'){
             steps{
                 dir('target'){
-                    bat 'java -jar  mspr-1.0.0.jar '
+                    bat "java -jar  *.${pom.packaging}"
                 }
             }
         }
