@@ -35,9 +35,9 @@ pipeline {
             steps{
                     script {
                     pom = readMavenPom file: "pom.xml";
-                    dir('target'){
-                        bat "java -jar  *.${pom.packaging}"
-                    }
+                    filesByGlob = findFiles(glob: "target/*.${pom.packaging}");
+                    artifactPath = filesByGlob[0].path;
+                    bat "java -jar  ${artifactPath}"
                     }
             }
         }
