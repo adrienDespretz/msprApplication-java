@@ -17,7 +17,8 @@
 
 ## Difficultées rencontrées :
 
-Lors de l'ajout des tests unitaires, l'un des tests ne voulait pas bien encoder les accents lors de l'exécution de ce dernier. Cela a donc généré une erreur empechant le test de fonctionner.
+Lors de l'ajout des tests unitaires, l'un des tests ne voulait pas bien encoder les accents lors de l'exécution de ce dernier. Cela a donc généré une erreur empechant le test de fonctionner. 
+Cet événement s'est produit lors de l'intégration au pipeline alors que tout fonctionnait en local.
 
 
 ## Fonctionnalités supplémentaires mises en place :
