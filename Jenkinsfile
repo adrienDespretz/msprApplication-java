@@ -35,7 +35,9 @@ pipeline {
             steps{
                     script {
                     pom = readMavenPom file: "pom.xml";
-                    bat "java -jar  ${pom.packaging}"
+                    dir('target'){
+                        bat "java -jar  ${pom.packaging}"
+                    }
                     }
             }
         }
