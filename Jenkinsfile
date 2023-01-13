@@ -33,9 +33,10 @@ pipeline {
         }
         stage('Generate website'){
             steps{
-                dir('target'){
-                    bat "java -jar  *.${pom.packaging}"
-                }
+                    script {
+                    pom = readMavenPom file: "pom.xml";
+                    bat "java -jar  target/*.${pom.packaging}"
+                    }
             }
         }
           stage('SonarQube Analysis') {
@@ -51,7 +52,6 @@ pipeline {
         stage('Publish to nexus') {
             steps {
                 script {
-
                     pom = readMavenPom file: "pom.xml";
                     filesByGlob = findFiles(glob: "target/*.${pom.packaging}");
                     artifactPath = filesByGlob[0].path;
