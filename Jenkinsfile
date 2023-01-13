@@ -38,19 +38,6 @@ pipeline {
                 }
             }
         }
-        stage('SonarQube Analysis') {
-        def mvn = tool 'Default Maven';
-        withSonarQubeEnv() {
-            sh "${mvn}/bin/mvn clean verify sonar:sonar -Dsonar.projectKey=Jenkins"
-        }
-        }
-        stage('Deploy to SonarQube'){
-            steps{
-                dir('target'){
-                    bat 'java -jar  mspr-1.0.0.jar '
-                }
-            }
-        }
         stage('Publish to nexus') {
             steps {
                 script {
