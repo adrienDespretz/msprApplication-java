@@ -12,7 +12,7 @@
 
 * Creation de tests unitaires permettant de tester plusieurs fonctions de notre projet.
 * Liaison de notre projet avec SonarQube pour mesurer la qualité de notre code.
-* Création d'un fichier jenkins représentant notre pipeline permettant de récupérer notre projet git, de le faire tourner lui et ses tests unitaires, de générer le site web, de lancer SonarQube ainsi que de publier sur Nexus. Le pipeline sera lancer sur Jenkins qui est un outil logiciel d'intégration continue permettant de tester et de signaler les modifications effectuées sur notre projet.
+* Création d'un fichier Jenkisfile représentant notre pipeline permettant de récupérer notre projet git, de le faire tourner lui et ses tests unitaires, de générer le site web, de lancer SonarQube ainsi que de publier sur Nexus. Le pipeline sera lancer sur Jenkins qui est un outil logiciel d'intégration continue permettant de tester et de signaler les modifications effectuées sur notre projet.
 * Création de notre projet avec Nexus, pour permettre de stocker notre fichier jar avec ses différentes version
 
 
